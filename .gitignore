@@ -1,0 +1,25 @@
+node_modules
+npm-debug.log
+.DS_Store
+
+build/
+dev/
+coverage/
+
+*.zip
+*.xpi
+*.crx
+# pem files are used to sign the extension so we ignore the to avoid accidental leakage
+*.pem
+update.xml
+.vscode/
+
+# IntelliJ IDEA config
+.idea
+**/*.iml
+
+# manifests are built dynamically
+chrome/manifest.*.json
+
+# history plugin for vscode
+.history

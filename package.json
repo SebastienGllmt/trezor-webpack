@@ -1,0 +1,69 @@
+{
+  "name": "trezor-webpack",
+  "version": "1.0.0",
+  "description": "Webpack example Trezor integration",
+  "scripts": {
+    "dev": "rimraf dev/ && babel-node scripts/build --type=debug --env 'mainnet'",
+    "prod": "rimraf build/ && NODE_ENV=production babel-node scripts/build --type=prod --env 'mainnet'",
+    "eslint": "eslint app chrome scripts webpack/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Emurgo/trezor-webpack"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run eslint"
+    }
+  },
+  "keywords": [
+    "trezor"
+  ],
+  "author": "EMURGO",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.9.6",
+    "@babel/node": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-export-default-from": "7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "@babel/preset-react": "7.9.4",
+    "@babel/register": "7.9.0",
+    "@babel/runtime": "7.9.6",
+    "@babel/runtime-corejs3": "7.9.6",
+    "babel-eslint": "11.0.0-beta.2",
+    "babel-loader": "8.1.0",
+    "babel-plugin-add-module-exports": "1.0.2",
+    "babel-plugin-module-resolver": "4.0.0",
+    "babel-preset-react-optimize": "1.0.1",
+    "config": "1.31.0",
+    "config-webpack": "1.0.4",
+    "eslint": "7.0.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.19.0",
+    "html-webpack-harddisk-plugin": "1.0.1",
+    "html-webpack-plugin": "4.3.0",
+    "husky": "4.2.5",
+    "rimraf": "3.0.2",
+    "shelljs": "0.8.4",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.11",
+    "webpack-hot-middleware": "2.25.0",
+    "webpack-httpolyglot-server": "0.3.0"
+  },
+  "dependencies": {
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-hot-loader": "4.12.21",
+    "trezor-connect": "7.0.5"
+  },
+  "engineStrict": true,
+  "engine": {
+    "node": "~12.16.1",
+    "npm": "~6.14.2"
+  }
+}
